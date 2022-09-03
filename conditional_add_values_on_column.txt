@@ -1,0 +1,9 @@
+= Table.ReplaceValue(#"Changed Type1",each [old cities],each List.Accumulate(
+        List.Buffer( Table.ToRecords( replace ) ),
+          [old cities],
+           ( valueToReplace, replaceOldNewRecord ) => 
+               Text.Replace( valueToReplace,               
+                             replaceOldNewRecord[old cities],          
+                             replaceOldNewRecord[new cities] ) ),
+     Replacer.ReplaceText,
+     {"old cities"})
