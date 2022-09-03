@@ -1,4 +1,14 @@
-= Table.ReplaceValue(#"Changed Type1",each [old cities],each List.Accumulate(
+each[old cities] => the column name on which we have to change values
+replace = the table where we have the key value pairs of values to replace
+old cities again the column name on which we have to change values
+replaceOldNewRecord[old cities] is the column name from replace table
+replaceOldNewRecord[new cities] is the column name from replace table
+
+
+
+
+
+= Table.ReplaceValue(#"Changed Type1",each [old cities],each List.Accumulate( 
         List.Buffer( Table.ToRecords( replace ) ),
           [old cities],
            ( valueToReplace, replaceOldNewRecord ) => 
