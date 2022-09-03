@@ -1,3 +1,6 @@
+
+https://gorilla.bi/power-query/replace-values
+
 each[old cities] => the column name on which we have to change values
 replace = the table where we have the key value pairs of values to replace
 old cities again the column name on which we have to change values
